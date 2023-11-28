@@ -96,10 +96,16 @@ def main():
         screen.blit(kk_img, kk_rct)
         # 爆弾ブリット
         screen.blit(ball, ball_rct)
+<<<<<<< HEAD
         # tmrの値に応じて、リストから適切な要素を選択する
         avx, avy = VX*accs[min(tmr//500, 9)], VY*accs[min(tmr//500, 9)]  # 速度が加速する
         ball = ball_imgs[min(tmr//500, 9)]  # 爆弾のサイズを変わる
         ball.set_colorkey((0, 0, 0))  # 黒を透明させる
+=======
+        avx, avy = VX*accs[min(tmr//500, 9)], VY*accs[min(tmr//500, 9)]
+        ball = ball_imgs[min(tmr//500, 9)]
+        ball.set_colorkey((0, 0, 0))
+>>>>>>> 6c3c5da643716b4a5d26250c5c8faea3ce50170e
         ball_rct.move_ip(avx, avy)  
         yoko, tate = check_bound(ball_rct)
         if not yoko:  # 横方向にはみ出たら

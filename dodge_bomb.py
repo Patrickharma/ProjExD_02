@@ -50,6 +50,10 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: 
                 return
+        # collide 
+        if kk_rct.colliderect(ball_rct):
+            print("Game Over")
+            return
         # bird movement 
         key_lst = pg.key.get_pressed()
         tot_travel = [0, 0]

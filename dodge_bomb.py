@@ -34,6 +34,7 @@ def main():
 
         #ball blit
         screen.blit(ball, ball_rct)
+        ball_rct.move_ip(VX, VY)
         pg.display.update()
         tmr += 1
         clock.tick(50)
